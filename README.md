@@ -9,7 +9,7 @@
 
 #### Update env
 
-sh
+```sh
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -17,7 +17,7 @@ DB_DATABASE=weather_service_api
 DB_USERNAME=root
 DB_PASSWORD=
 OPEN_WEATHER_API_KEY=858f15fed9292cbe25c341a754c55e45
-
+```
 
 ## Installation
 
@@ -28,17 +28,17 @@ Install all the dependencies and Dev dependencies
 
 #### Create City
 
-http
+```http
     POST /api/v1/city/create
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `name`    | `string` | *Required*.  Name |
-
+```
 
     Response
 
-json
+```json
  {
     "success": true,
     "status": 200,
@@ -55,20 +55,21 @@ json
         "id": 4
     }
 }
+```
 
 #### Get City list with Weather details
 
-http
+```http
     POST /api/v1/city
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `name`    | `string` |  City Name                 |
-
+```
 
     Response
 
-json
+```json
 {
     "success": true,
     "status": 200,
@@ -125,3 +126,4 @@ json
         }
     ]
 }
+```
